@@ -1,0 +1,92 @@
+body {
+  padding: 0;
+  margin: 0;
+  /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+  font: normal 14px 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.div-container {
+  margin: 0 24px;
+}
+
+article {
+  display: inline-block;
+}
+.one-third {
+  margin-right: 3%;
+}
+
+.one-third:last-child {
+  margin-right: 0;
+}
+
+@media only screen and (min-width: 480px) {
+  .one-third {
+    color: lightseagreen;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .one-third {
+    width: 30%;
+    color: maroon;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .one-third {
+    color: darkgreen;
+  }
+}
+
+
+
+
+
+/* ======================================
+ 
+    MediaQuery-Reporter Styles
+ 
+========================================= */
+ 
+body:after {
+  content: "less than 320px";
+  font-size: 300%;
+  font-weight: bold;
+  position: fixed;
+  bottom: 60px;
+  width: 100%;
+  text-align: center;
+  background-color: hsla(1,60%,40%,0.7);
+  color: #fff;
+}
+@media only screen and (min-width: 320px) {
+  body:after {
+      content: "320 to 480px";
+      background-color: hsla(90,60%,40%,0.7);
+  }
+}
+@media only screen and (min-width: 480px) {
+  body:after {
+      content: "480 to 768px";
+      background-color: hsla(180,60%,40%,0.7);
+  }
+}
+@media only screen and (min-width: 768px) {
+  body:after {
+      content: "768 to 1024px";
+      background-color: hsla(270,60%,40%,0.7);
+  }
+}
+@media only screen and (min-width: 1024px) {
+  body:after {
+      content: "1024 and up";
+      background-color: hsla(360,60%,40%,0.7);
+  }
+}
